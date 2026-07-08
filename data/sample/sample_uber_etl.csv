@@ -1,0 +1,4 @@
+id,source,event_date,metric_name,metric_value
+1,system_a,2026-01-01,records_processed,1200
+2,system_b,2026-01-02,records_processed,1337
+3,system_c,2026-01-03,records_processed,1098
