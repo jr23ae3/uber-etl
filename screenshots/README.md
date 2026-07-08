@@ -3,6 +3,7 @@
 Add project screenshots to this directory.
 
 Suggested files:
-- architecture-overview.png
-- pipeline-run.png
-- dashboard-preview.png
+- pipeline-run-log.png
+- summary-kpis-winrate-risk-pnl.png
+- drawdown-chart.png
+- moving-average-trend.png
