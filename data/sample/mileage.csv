@@ -1,0 +1,13 @@
+mileage_id,mileage_date,neighborhood,miles_driven
+m001,2026-07-01,Downtown,82.5
+m002,2026-07-01,Airport,76.2
+m003,2026-07-01,Midtown,68.4
+m004,2026-07-02,Downtown,88.1
+m005,2026-07-02,Airport,74.0
+m006,2026-07-02,Midtown,70.5
+m007,2026-07-03,Downtown,84.6
+m008,2026-07-03,Airport,79.8
+m009,2026-07-03,Midtown,66.9
+m010,2026-07-04,Downtown,80.4
+m011,2026-07-04,Airport,86.3
+m012,2026-07-04,Midtown,63.7

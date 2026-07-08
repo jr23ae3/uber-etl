@@ -1,0 +1,7 @@
+bonus_id,bonus_date,neighborhood,bonus_amount
+b001,2026-07-01,Downtown,22.00
+b002,2026-07-01,Airport,18.00
+b003,2026-07-02,Downtown,24.00
+b004,2026-07-02,Midtown,16.00
+b005,2026-07-03,Airport,21.00
+b006,2026-07-04,Downtown,20.00

@@ -1,0 +1,13 @@
+trip_id,trip_date,neighborhood,trip_count,trip_earnings
+t001,2026-07-01,Downtown,12,184.50
+t002,2026-07-01,Airport,9,172.10
+t003,2026-07-01,Midtown,10,149.75
+t004,2026-07-02,Downtown,13,201.40
+t005,2026-07-02,Airport,8,164.30
+t006,2026-07-02,Midtown,11,158.20
+t007,2026-07-03,Downtown,12,196.70
+t008,2026-07-03,Airport,10,181.55
+t009,2026-07-03,Midtown,9,147.90
+t010,2026-07-04,Downtown,11,188.20
+t011,2026-07-04,Airport,12,204.15
+t012,2026-07-04,Midtown,8,138.60

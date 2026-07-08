@@ -1,0 +1,13 @@
+shift_id,shift_date,neighborhood,hours_worked
+h001,2026-07-01,Downtown,7.5
+h002,2026-07-01,Airport,6.8
+h003,2026-07-01,Midtown,6.2
+h004,2026-07-02,Downtown,8.0
+h005,2026-07-02,Airport,6.6
+h006,2026-07-02,Midtown,6.9
+h007,2026-07-03,Downtown,7.8
+h008,2026-07-03,Airport,7.2
+h009,2026-07-03,Midtown,6.1
+h010,2026-07-04,Downtown,7.1
+h011,2026-07-04,Airport,7.9
+h012,2026-07-04,Midtown,5.8

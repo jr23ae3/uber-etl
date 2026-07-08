@@ -1,25 +1,29 @@
-# Architecture Diagram
+# Uber Earnings Analytics Architecture
 
+```mermaid
+flowchart TB
+    A[Trips, Tips, Bonuses, Hours, Gas, Mileage CSVs] --> B[Python Loader]
+    B --> C[(Postgres raw schema)]
+    C --> D[Python Metrics Builder]
+    D --> E[(Postgres analytics views)]
+    E --> F[Dashboard - Metabase]
 
-mermaid
-flowchart LR
-    A[Source Systems] --> B[Ingestion Layer]
-    B --> C[Raw Storage]
-    C --> D[Transformation Layer]
-    D --> E[Analytics Warehouse]
-    E --> F[BI / Reporting]
+    E --> E1[Hourly rate]
+    E --> E2[Daily earnings]
+    E --> E3[Weekly earnings]
+    E --> E4[Best neighborhoods]
+    E --> E5[Profit after expenses]
+```
 
-    subgraph Runtime
-      G[Docker Compose Services]
-    end
+## Pipeline Components
+- Data ingestion: [etl/load_uber_data.py](etl/load_uber_data.py)
+- Raw schema/tables: [sql/init/001_init.sql](sql/init/001_init.sql)
+- Metrics builder: [etl/build_uber_metrics.py](etl/build_uber_metrics.py)
+- Dashboard queries: [config/dashboard_queries.sql](config/dashboard_queries.sql)
 
-    G --> B
-    G --> D
-
-## Components
-- Source Systems: External APIs, files, or databases
-- Ingestion Layer: Batch or streaming extract jobs
-- Raw Storage: Landing zone for unmodeled data
-- Transformation Layer: SQL/Python transformations
-- Analytics Warehouse: Curated analytical models
-- BI / Reporting: Dashboards and downstream consumption
+## Metric Logic
+- Hourly rate: $profit\_after\_expenses / hours\_worked$
+- Daily earnings: Sum of trip earnings + tips + bonuses per day
+- Weekly earnings: Weekly rollup from daily metrics
+- Best neighborhoods: Rank by total profit after expenses
+- Profit after expenses: Gross earnings minus gas and mileage costs

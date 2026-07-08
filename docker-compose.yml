@@ -10,12 +10,37 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./sql/init:/docker-entrypoint-initdb.d
+
+  python-etl:
+    build:
+      context: .
+      dockerfile: etl/Dockerfile
+    container_name: uber_etl_python
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: warehouse
+      POSTGRES_USER: etl
+      POSTGRES_PASSWORD: etl
+      DATA_DIR: /workspace/data/sample
+      MILE_COST: 0.35
+    depends_on:
+      - postgres
 
   adminer:
     image: adminer:4
     container_name: uber_etl_adminer
     ports:
       - "8080:8080"
+    depends_on:
+      - postgres
+
+  metabase:
+    image: metabase/metabase:v0.50.29
+    container_name: uber_etl_metabase
+    ports:
+      - "3002:3000"
     depends_on:
       - postgres
 

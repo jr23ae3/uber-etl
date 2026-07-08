@@ -1,0 +1,13 @@
+expense_id,expense_date,neighborhood,gas_cost
+g001,2026-07-01,Downtown,27.40
+g002,2026-07-01,Airport,25.80
+g003,2026-07-01,Midtown,22.60
+g004,2026-07-02,Downtown,28.10
+g005,2026-07-02,Airport,24.90
+g006,2026-07-02,Midtown,23.70
+g007,2026-07-03,Downtown,26.80
+g008,2026-07-03,Airport,26.10
+g009,2026-07-03,Midtown,21.90
+g010,2026-07-04,Downtown,25.50
+g011,2026-07-04,Airport,27.20
+g012,2026-07-04,Midtown,20.80
